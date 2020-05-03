@@ -1,4 +1,6 @@
-
+'''
+https://practice.geeksforgeeks.org/problems/missing-number-in-array/0
+'''
 
 # search numbers from 1 to n
 # first missing will be our answer
