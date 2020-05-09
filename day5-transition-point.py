@@ -16,3 +16,4 @@ Your function should return transition index
 
 def transitionPoint(arr, n):
 	pass
+	
