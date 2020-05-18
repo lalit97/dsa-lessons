@@ -43,7 +43,8 @@ class LinkedList:
 			curr = self.head
 			while curr.next is not None:
 				curr = curr.next
-			curr.next = Node(data)
+			new_node = Node(data)
+			curr.next = new_node
 		return self.head
 	
 	def traverse(self):
@@ -53,6 +54,8 @@ class LinkedList:
 		while curr is not None:
 			print(curr.data, end='->')
 			curr = curr.next
+		print()
+		return self.head
 	
 	def insert_after(self, item, new):
 		if self.head is None:
@@ -65,7 +68,29 @@ class LinkedList:
 		new_node = Node(new)
 		curr.next = new_node
 		new_node.next = temp
+		return self.head
+	
+	def delete(self, data):
+		if self.head is None:
+			return None
+		if self.head.data == data:
+			return self.head.next
 		
+		curr = self.head
+		while curr.next is not None:
+			if curr.next.data == data:
+				temp = curr.next
+				curr.next = curr.next.next
+				temp.next = None
+				return self.head
+			curr = curr.next
+		
+	def update(self, old, new):
+		pass
+
+	def prepend(self, data):
+		pass
+
 
 if __name__ == '__main__':
 	linked_list = LinkedList()
@@ -79,3 +104,7 @@ if __name__ == '__main__':
 	#linked_list.traverse()
 	linked_list.insert_after(8, 15)
 	linked_list.traverse()
+	linked_list.delete(15)
+	linked_list.traverse()
+	linked_list.update(8, 10)
+	linked_list.prepend(2)
