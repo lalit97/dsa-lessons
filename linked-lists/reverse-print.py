@@ -22,66 +22,6 @@ class LinkedList:
 			curr.next = new_node
 		return self.head
 	
-	def traverse(self):
-		if self.head is None:
-			return None
-		curr = self.head 
-		while curr is not None:
-			print(curr.data, end='->')
-			curr = curr.next
-		print()
-		return self.head
-	
-	def insert_after(self, item, new):
-		if self.head is None:
-			return None
-		curr = self.head
-		while curr.data != item:
-			curr = curr.next
-
-		temp = curr.next
-		new_node = Node(new)
-		curr.next = new_node
-		new_node.next = temp
-		return self.head
-	
-	def delete(self, data):
-		if self.head is None:
-			return None
-		if self.head.data == data:
-			return self.head.next
-		
-		curr = self.head
-		while curr.next is not None:
-			if curr.next.data == data:
-				temp = curr.next
-				curr.next = curr.next.next
-				temp.next = None
-				return self.head
-			curr = curr.next
-		
-	def update(self, old, new):
-		if self.head is None:
-			return None
-		curr = self.head
-		while curr.next is not None:
-			if curr.data == old:
-				curr.data = new
-				return self.head
-			curr = curr.next
-		return self.head
-
-	def prepend(self, data):
-		if self.head is None:
-			new_node = Node(data)
-			self.head = new_node
-			return self.head
-		temp = self.head
-		new_node = Node(data)
-		self.head = new_node
-		new_node.next = temp
-		return self.head
-
 """
 complete this function
 head is given,
