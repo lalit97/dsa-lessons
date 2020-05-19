@@ -1,36 +1,11 @@
-
-
-#init -> initializer
 """
-
-class Integer:
-	def __init__(self, data):
-		self.data = data
-
-class Table:
-	def __init__(self, w, h, color):
-		self.w = w 
-		self.h = h
-		self.color = color 
-	
-
-
-t1 = Table(4,5,'white')
-
-
-Integer -> 4
-Char = 'C'
-Table -> width, height, colour
-(data, next)
-
-
+Problem not avaliable on GFG
 """
 
 class Node:
 	def __init__(self, data):
 		self.data = data
 		self.next = None
-
 
 class LinkedList:
 	def __init__(self):
@@ -107,20 +82,37 @@ class LinkedList:
 		new_node.next = temp
 		return self.head
 
+"""
+complete this function
+head is given,
+task is to print linked list in reverse
+"""
+def reverse_print(head):
+    if head is not None:
+        reverse_print(head.next)
+        print(head.data, end=" ")
+
+def direct_print(head):
+    if head is not None:
+        print(head.data, end=" ")
+        direct_print(head.next)
+
+
+"""
+rp(1)
+rp(2)
+rp(3)
+rp(4)
+rp(5)
+rp(5.next)
+5 4 3 2 1
+"""
 
 if __name__ == '__main__':
-	linked_list = LinkedList()
-	#print(linked_list.head)
-	linked_list.insert(5)
-	#print(linked_list.head.data)
-	linked_list.insert(8)
-	#print(linked_list.head.next.data)
-	linked_list.insert(14)
-	#print(linked_list.head.next.next.data)
-	#linked_list.traverse()
-	linked_list.insert_after(8, 15)
-	linked_list.traverse()
-	linked_list.delete(15)
-	linked_list.traverse()
-	linked_list.update(8, 10)
-	linked_list.prepend(2)
+    linked_list = LinkedList()
+    lis = [1, 2, 3, 4, 5]
+    for item in lis:
+        linked_list.insert(item)
+    #linked_list.traverse()
+    head = linked_list.head
+    reverse_print(head)

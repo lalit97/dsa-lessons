@@ -39,3 +39,24 @@ linkedlist[3]  O(n)
 from begging
 insertion -> O(1)
 deletion -> O(1)
+
+
+##########
+traverse and solve
+
+recursion -> 
+
+runner technique -> 
+    fast pointer slow pointer 
+    fast = fast.next.next
+    slow = slow.next
+
+
+"""
+-> Array length without using len()
+array = [1,2,3,4,5]
+length = 0
+for item in arr:
+    length += 1
+return length
+"""

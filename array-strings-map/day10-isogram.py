@@ -5,12 +5,12 @@ https://practice.geeksforgeeks.org/problems/check-if-a-string-is-isogram-or-not-
 
 
 
-def is_isogram(string):
-	pass
+def isIsogram(string):
+	lookup = set()
+	for char in string:
+		if char not in lookup:
+			lookup.add(char)
+		else:
+			return False
+	return True
 
-
-if __name__ == '__main__':
-	for _ in range(int(input())):
-		string = input()
-		ans = is_isogram(string)
-		print(ans)

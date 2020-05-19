@@ -1,43 +1,33 @@
-
 """
-traverse and solve
-
-recursion -> 
-
-runner technique -> 
-    fast pointer slow pointer 
-    fast = fast.next.next
-    slow = slow.next
-
-
-1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+https://practice.geeksforgeeks.org/problems/finding-middle-element-in-a-linked-list/1
 """
 
-# length = len(array)
+"""
+Method -> 1 (Traversal)
+def get_length(head):
+    count = 0
+    while head is not None:
+        count += 1
+        head = head.next
+    return count
 
-# array = [1,2,3,4,5]
-# length = 0
-# for item in arr:
-#     length += 1
-# return length
+def findMid(head):
+    length = get_length(head)
+    middle = length // 2
+    for i in range(middle):
+        head = head.next
+    return head
+"""
 
-length = 0
-curr = self.head
-while curr is not None:
-    curr = curr.next
-    length += 1
+#Method ->2 (Runner up)
 
-##
-curr = head
-for i in range(length//2):
-    curr.next
-return head.data
+def findMid(head):
+    slow = head
+    fast = head
+    while fast.next is not None and fast.next.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+    if fast.next is None:
+        return slow
+    return slow.next
 
-########################
-
-slow = self.head
-fast = self.head
-while fast is not None:
-    slow = slow.next
-    fast = fast.next.next
-return slow.data
