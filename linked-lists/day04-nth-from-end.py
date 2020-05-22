@@ -19,14 +19,16 @@ can be done by either of the 3 methods
 def getNthfromEnd(head, n):
     p1 = head
     p2 = head
-
-    #move p1
-    for i in range(__):
+    for i in range(n):
+        if p1 is None:
+            return -1
         p1 = p1.next
 
+    while p1 is not None:
+        p1 = p1.next
+        p2 = p2.next
+    return p2.data
 
-    #move p1 and p2
-    while ----:
 
 """
     lenght = 9
