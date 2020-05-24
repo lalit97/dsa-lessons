@@ -10,5 +10,26 @@ Function Arguments: head_a, head_b (heads of both the lists)
 Return Type: NODE present at the point of intersection, or -1 if no common point.
 """
 
-def intersetPoint(head_a,head_b):
-    pass
+1 -> 2 -> 3 -> 8 -> 9 -> 10 -> 12 -> 14 -> 16
+
+4 -> 5 -> / 
+"""
+list1 -> before intersection point length = x
+list2 -> before intersection point length = y
+after intersection point length = z
+
+x + z + 
+y + z + 
+
+think about changing head
+"""
+while head_a != head_b:
+    if head_a is not None:
+        pass
+    else:
+        pass
+    if head_b is not None:
+        pass
+    else:
+        pass
+return -1
